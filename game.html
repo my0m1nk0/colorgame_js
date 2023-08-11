@@ -7,33 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-   
     <title>Color Game</title>
 </head>
-<body id="background">
+<body class="bg">
 <img class="logo" src="image/logo.png" >
 
 <div class="menu">
     <img class="setting" src="/image/setting.png" alt="">
     <img class="setting "  src="image/music-on.png" id="play" alt="">
     <img class="setting "  src="image/music.png" id="pause" hidden alt="">
-</div>
-<section id="game-name">
-   
-    <h1 class="orange">C</h1>
-    <h1 class="green">O</h1>
-    <h1 class="pink">L</h1>
-    <h1 class="yellow">O</h1>
-    <h1 class="blue">U</h1>
-    <h1 class="violet">R</h1>
-    <p class="name">Adventure</p>
-    <a href="#">Start Game</a>
-
     <audio controls autoplay="true" loop="true" hidden="" id="musicBG">
         <source src="music/music.mp3" type="audio/mpeg">
 
     </audio>
+</div>
+<section id="showCode">
+    <h1 class="color"><span>#</span> FFFF00</h1>
 </section>
+<!--Show Color Section Start-->
+<section id="showColor">
+   <div class="row">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+   </div>
+    <div class="row">
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+    </div>
+    <div class="row">
+        <div class="seven"></div>
+        <div class="eight"></div>
+        <div class="nine"></div>
+    </div>
+</section>
+<!--Show Color Section End-->
+
 
 <script src="./js/app.js"></script>
 </body>

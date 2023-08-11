@@ -6,13 +6,48 @@
     --button-color : #9232b8;
     --font : 'Press Start 2P', cursive;
 }
-
-
+*{
+    box-sizing: border-box;
+}
 body{
+    margin: 0;
+    padding: 0;
+}
+
+
+#background{
     background: rgba(122, 151, 255,0.1) url("../image/background.jpg") no-repeat fixed;
     background-size: 100% 100%;
 }
+.bg{
+
+    background: rgba(122, 151, 255,0.1) url("../image/bg.jpg") no-repeat fixed;
+    background-size: 100% 100%;
+
+
+}
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100px;
+}
 /*home Page Start*/
+.menu{
+    margin-top: 6rem;
+    display: flex;
+    padding: 0 20rem;
+    justify-content: space-between;
+}
+.setting{
+    width: 50px;
+    height: 50px;
+
+}
+.off{
+    display: none;
+}
 #game-name{
     text-align: center;
     margin-top: 120px;
@@ -53,7 +88,7 @@ body{
     color: var(--gray);
     margin-bottom: 50px;
 }
-#background > img{
+.logo{
     position: absolute;
     top: 0;
     left: 0;
@@ -74,3 +109,86 @@ body{
     background-color: #931ed6;
 }
 /*home Page End*/
+/*show Color Start*/
+#showCode{
+    justify-content: center;
+    text-align: center;
+}
+.color{
+    padding: 20px 80px;
+    background-color: #462c7a;
+    display: inline-block;
+
+}
+#showColor{
+
+}
+.row {
+
+    justify-content: center;
+    display: flex;
+}
+.one{
+    width: 100px;
+    height: 100px;
+    background: #2ab072;
+    margin: 20px 20px;
+}
+.two{
+    width: 100px;
+    height: 100px;
+    background: blue;
+    margin: 20px 20px;
+
+}
+.three{
+    width: 100px;
+    height: 100px;
+    background: olive;
+    margin: 20px 20px;
+
+}
+.four{
+    width: 100px;
+    height: 100px;
+    background: orangered;
+    margin: 20px 20px;
+
+}
+.five{
+    width: 100px;
+    height: 100px;
+    background: violet;
+    margin: 20px 20px;
+
+}
+.six{
+    width: 100px;
+    height: 100px;
+    background: grey;
+    margin: 20px 20px;
+
+}
+.seven{
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 20px 20px;
+
+}
+.eight{
+    width: 100px;
+    height: 100px;
+    background: deeppink;
+    margin: 20px 20px;
+
+}
+.nine{
+    width: 100px;
+    height: 100px;
+    background: chocolate;
+    margin: 20px 20px;
+
+}
+
+/*show Color End*/
