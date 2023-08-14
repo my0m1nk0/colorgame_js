@@ -1,6 +1,7 @@
 /*Variable defined*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 :root{
     --gray : #462c7a;
     --button-color : #9232b8;
@@ -181,3 +182,48 @@ body{
     }
 }
 /*Loading Css End*/
+.text-color{
+    position: relative;
+
+
+}
+
+@media screen and (min-width: 800px){
+    .color-code{
+        margin: 0;
+        width: 500px;
+        height: 250px;
+    }
+    .text-content{
+        font-family: 'Permanent Marker', cursive;
+        position: absolute;
+        top: 60%;
+        left: 35%;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 2px 2px #0fd5d9;
+    }
+
+}
+@media screen and (min-width: 300px) and (max-width: 800px){
+    .color-code{
+        margin: 0;
+        width: 400px;
+        height: 200px;
+    }
+    .text-content{
+        font-family: 'Permanent Marker', cursive;
+        position: absolute;
+        top: 55%;
+        left: 27%;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 2px 2px #0fd5d9;
+    }
+    .set-bar{
+        margin-bottom: 50px;
+    }
+
+}
+
+
