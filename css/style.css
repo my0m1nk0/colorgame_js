@@ -113,7 +113,19 @@ body{
 #showCode{
     justify-content: center;
     text-align: center;
+    position: relative;
 }
+#showCode > img{
+    width: 250px;
+    height: 150px;
+}
+.letter{
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+}
+
 .color{
     padding: 20px 80px;
     background-color: #462c7a;
