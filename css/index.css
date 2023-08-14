@@ -1,0 +1,183 @@
+/*Variable defined*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+:root{
+    --gray : #462c7a;
+    --button-color : #9232b8;
+    --font : 'Press Start 2P', cursive;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/*Background Style*/
+
+#background{
+    background: rgba(122, 151, 255,0.1) url("../image/background.jpg") no-repeat fixed;
+    background-size: 100% 100%;
+}
+#bg{
+
+        background: rgba(122, 151, 255,0.1) url("../image/bg.jpg") no-repeat fixed;
+        background-size: 100% 100%;
+
+
+    }
+/*BSS LOGO*/
+.logo{
+    width: 150px;
+    height: 100px;
+}
+/*Setting*/
+.setting{
+    width: 50px;
+    height: 50px;
+
+}
+
+/*Game Name Design Start*/
+#game-name{
+    text-align: center;
+    position: relative;
+}
+
+#game-name >h1{
+    display: inline;
+    margin: 0;
+    font-family: 'Kablammo', cursive;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 5px 3px #4e555b;
+
+}
+.orange{
+    color: #c97b1a;
+}
+.green{
+    color: #2ab072;
+}
+.pink{
+    color: #f5517a;
+}
+.yellow{
+    color: #fffb0d;
+}
+.blue{
+    color: #0fd5d9;
+}
+.violet{
+    color: #931ed6;
+}
+#game-name > p{
+    font-family:var(--font);
+    font-size: 30px;
+    color: var(--gray);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px #1e7e34;
+    margin: 0;
+
+
+}
+.play-btn{
+    width: 150px;
+    height: 150px;
+    margin: 0;
+}
+
+.loader {
+    height: 20px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.loader--dot {
+    animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    border: 2px solid white;
+}
+.loader--dot:first-child {
+    background-color: #8cc759;
+    animation-delay: 0.5s;
+}
+.loader--dot:nth-child(2) {
+    background-color: #8c6daf;
+    animation-delay: 0.4s;
+}
+.loader--dot:nth-child(3) {
+    background-color: #ef5d74;
+    animation-delay: 0.3s;
+}
+.loader--dot:nth-child(4) {
+    background-color: #f9a74b;
+    animation-delay: 0.2s;
+}
+.loader--dot:nth-child(5) {
+    background-color: #60beeb;
+    animation-delay: 0.1s;
+}
+.loader--dot:nth-child(6) {
+    background-color: #fbef5a;
+    animation-delay: 0s;
+}
+.loader--text {
+    position: absolute;
+    top: 200%;
+    left: 0;
+    right: 0;
+    width: 4rem;
+    margin: auto;
+}
+.loader--text:after {
+    content: "Loading";
+    font-weight: bold;
+    font-size: 1.2rem;
+    color:white;
+    animation-name: loading-text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    15% {
+        transform: translateX(0);
+    }
+    45% {
+        transform: translateX(230px);
+    }
+    65% {
+        transform: translateX(230px);
+    }
+    95% {
+        transform: translateX(0);
+    }
+}
+@keyframes loading-text {
+    0% {
+        content: "Loading";
+    }
+    25% {
+        content: "Loading.";
+    }
+    50% {
+        content: "Loading..";
+    }
+    75% {
+        content: "Loading...";
+    }
+}
+/*Loading Css End*/

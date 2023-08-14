@@ -1,6 +1,8 @@
 const music = document.getElementById("play");
 const pause = document.getElementById("pause");
 const musicBg = document.getElementById("musicBG");
+const loading = document.getElementById("loading");
+const playBtn = document.getElementById("play-game")
 music.addEventListener('click',()=>{
     musicBg.play();
 
@@ -15,32 +17,31 @@ pause.addEventListener('click',()=>{
     pause.setAttribute("hidden","true")
 })
 
-// //Random Color Generate
-// function getRandomColor() {
-//     var letters = '0123456789ABCDEF';
-//     var color = '#';
-//     for (var i = 0; i < 6; i++) {
-//         color += letters[Math.floor(Math.random() * 16)];
-//     }
-//     return color;
-// }
-const playBtn = document.getElementById("play");
 let colors = generateColor(9);
 let randomPlayColor = colors[Math.floor(Math.random() * 9)]
 let colorBox = 9;
-console.log(colors);
-console.log(randomPlayColor);
+//Play Btn
+playBtn.addEventListener("click", () => {
+    loading.classList.remove('d-none');
+    setTimeout(() => {
+        window.location.href = "game.html";
+    }, 6000);
+});
+window.addEventListener('beforeunload', () => {
+    loading.classList.add('d-none');
+});
 //Play Game
-playBtn.addEventListener("click",()=>{
-    colorBox =9;
-    colors = generateColor(colorBox);
-    randomPlayColor = colors[Math.random() *6];
-    for (let i =0; i< colorBox.length; i++){
-        colorBox[i].style.background = colors[i];
+// playBtn.addEventListener("click",()=>{
+//     colorBox =9;
+//     colors = generateColor(colorBox);
+//     randomPlayColor = colors[Math.random() *6];
+//     for (let i =0; i< colorBox.length; i++){
+//         colorBox[i].style.background = colors[i];
+//
+//     }
+//
+// })
 
-    }
-
-})
 
 //Fail
 function failGame(a){

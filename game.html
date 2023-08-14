@@ -6,49 +6,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
     <title>Color Game</title>
 </head>
-<body class="bg">
-<img class="logo" src="image/logo.png" >
+<body id="bg">
+<img class="logo" src="image/logo.png">
 
-<div class="menu">
+<div class="container d-flex justify-content-between">
     <img class="setting" src="/image/setting.png" alt="">
-    <img class="setting "  src="image/music.png" id="play" alt="">
-    <img class="setting "  src="image/music-on.png" id="pause" hidden alt="">
-    <audio controls autoplay="true" loop="true" hidden="" id="musicBG">
-        <source src="music/music.mp3" type="audio/mpeg">
-
-    </audio>
+    <img class="setting " src="image/music.png" id="play" hidden alt="">
+    <img class="setting " src="image/music-on.png" id="pause"  alt="">
 </div>
-<section id="showCode">
-    <img src="image/color-b-removebg-preview.png" alt="">
-    <div class="letter">
 
-        <h2>#FFFFFF</h2>
-    </div>
-</section>
-<!--Show Color Section Start-->
-<section id="showColor">
-   <div class="row">
-       <div class="one"></div>
-       <div class="two"></div>
-       <div class="three"></div>
-   </div>
-    <div class="row">
-        <div class="four"></div>
-        <div class="five"></div>
-        <div class="six"></div>
-    </div>
-    <div class="row">
-        <div class="seven"></div>
-        <div class="eight"></div>
-        <div class="nine"></div>
-    </div>
-</section>
-<!--Show Color Section End-->
+<audio controls autoplay="true" loop="true" hidden="" id="musicBG">
+    <source src="music/music.mp3" type="audio/mpeg">
 
+</audio>
+<div class="container">
+    <img src="image/color-background.png" alt="rainbow png">
 
+</div>
+
+<!--Propper Js CDN-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="./js/app.js"></script>
 </body>
 </html>
