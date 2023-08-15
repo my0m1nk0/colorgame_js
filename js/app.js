@@ -47,11 +47,14 @@ const showColor = document.getElementById('text-color');
 const colorRow = document.getElementById("colorRow");
 let colorBox=[];
 
-easyBtn.addEventListener("click", ()=>{
-chooseLevel.classList.add('d-none');
-showColor.classList.remove('d-none');
-colorBox.push(createElement(3))
-});
+    easyBtn.addEventListener("click", ()=>{
+        easyGame();
+    });
+    function easyGame(){
+        chooseLevel.classList.add('d-none');
+        showColor.classList.remove('d-none');
+        createElement(3)
+    }
 
 //Normal Play Game
 const normalBtn = document.getElementById("normal");
@@ -104,8 +107,24 @@ function createElement(color){
            let divBgColor=divBox.style.backgroundColor;
 
             if(compareColors(randomPlayColor,divBgColor)){
-                alert("You Won");
-                location.reload();
+           document.addEventListener('DOMContentLoaded',()=>{
+               const modal = document.getElementById('modal');
+               const home = document.getElementById('home');
+               const continueGame = document.getElementById('continue');
+               showCongratulationsModal(modal);
+
+               continueGame.addEventListener('click',()=>{
+                   colorRow.innerHTML='';
+                   easyGame();
+                   hideCongratulationsModal(modal)
+
+
+               });
+               home.addEventListener('click',()=>{
+                   location.reload();
+               })
+
+           })
             }else {
                 const wrongAns=document.getElementById("wrongAns");
                 wrongAns.classList.remove("d-none");
@@ -123,6 +142,16 @@ function createElement(color){
     }
 
 }
+// Function to show the modal
+function showCongratulationsModal(modal) {
+    let myModal = new bootstrap.Modal(modal);
+    myModal.show();
+}
+// Function to hide the modal
+function hideCongratulationsModal(modal) {
+    let myModal = new bootstrap.Modal(modal);
+    myModal.hide();
+}
 
 
 //Fail
@@ -131,6 +160,7 @@ function failGame(a){
 //model box
     //show Try Again
 }
+
 //Generate Color
 function generateColor(num){
     let colorArray=[];
