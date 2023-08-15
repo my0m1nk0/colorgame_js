@@ -69,6 +69,12 @@ hardBtn.addEventListener("click", ()=>{
     colorBox.push(createElement(9))
 });
 
+//Back Home
+const backHome = document.getElementById("back");
+backHome.addEventListener('click',()=>{
+    window.location.href='index.html';
+})
+
 
 
 //Play Game
