@@ -59,7 +59,8 @@ function createElement(color){
                 const continueGame = document.getElementById('continue');
                 showCongratulationsModal(modal);
 
-                continueGame.addEventListener('click',()=>{
+                continueGame.addEventListener('click',($event)=>{
+                    $event.preventDefault();
                     colorRow.innerHTML='';
                     easyGame();
                     hideCongratulationsModal(modal);
@@ -91,7 +92,10 @@ function createElement(color){
 }
 // Function to show the modal
 function showCongratulationsModal(modal) {
-    let myModal = new bootstrap.Modal(modal);
+    let myModal = new bootstrap.Modal(modal,{
+        backdrop:'static',
+        keyboard:false
+    });
     myModal.show();
 }
 // Function to hide the modal
