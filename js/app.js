@@ -39,7 +39,8 @@ const loading = document.getElementById("loading");
     });
 });
 
-//Easy Pay Game
+
+//Easy Play Game
 const easyBtn = document.getElementById("easy");
 const chooseLevel = document.getElementById("button-game");
 const showColor = document.getElementById('text-color');
@@ -50,7 +51,25 @@ easyBtn.addEventListener("click", ()=>{
 chooseLevel.classList.add('d-none');
 showColor.classList.remove('d-none');
 colorBox.push(createElement(3))
-})
+});
+
+//Normal Play Game
+const normalBtn = document.getElementById("normal");
+normalBtn.addEventListener("click", ()=>{
+    chooseLevel.classList.add('d-none');
+    showColor.classList.remove('d-none');
+    colorBox.push(createElement(6))
+});
+
+//Hard Play Game
+const hardBtn = document.getElementById("hard");
+hardBtn.addEventListener("click", ()=>{
+    chooseLevel.classList.add('d-none');
+    showColor.classList.remove('d-none');
+    colorBox.push(createElement(9))
+});
+
+
 
 //Play Game
 // playBtn.addEventListener("click",()=>{
@@ -73,13 +92,16 @@ function createElement(color){
     textContent.innerText=randomPlayColor;
     for(let i =0; i<colorArry.length;i++){
         const divBox = document.createElement('div');
-
+        divBox.classList.add('col-4')
             divBox.style.background =colorArry[i];
         divBox.addEventListener('click', function() {
            let divBgColor=divBox.style.backgroundColor;
+
             if(compareColors(randomPlayColor,divBgColor)){
-                alert("You Won")
+                alert("You Won");
+                location.reload();
             }else {
+                alert("wrong answer");
                 divBox.style.background = '';
             }
         });
