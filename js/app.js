@@ -38,22 +38,18 @@ const loading = document.getElementById("loading");
         loading.classList.add('d-none');
     });
 });
-function gamePlay(num){
-    let colors = generateColor(num);
-    let randomPlayColor = colors[Math.floor(Math.random() * num)];
-    textContent.innerText=randomPlayColor;
 
-
-}
 //Easy Pay Game
 const easyBtn = document.getElementById("easy");
 const chooseLevel = document.getElementById("button-game");
 const showColor = document.getElementById('text-color');
+const colorRow = document.getElementById("colorRow");
+let colorBox=[];
+
 easyBtn.addEventListener("click", ()=>{
 chooseLevel.classList.add('d-none');
 showColor.classList.remove('d-none');
-gamePlay(9);
-
+colorBox.push(createElement(3))
 })
 
 //Play Game
@@ -67,11 +63,36 @@ gamePlay(9);
 //     }
 //
 // })
+//Create Element
+function createElement(color){
+    let colorArry = generateColor(color);
+    console.log(colorArry);
+
+    let randomPlayColor = colorArry[Math.floor(Math.random() * color)];
+    console.log(randomPlayColor)
+    textContent.innerText=randomPlayColor;
+    for(let i =0; i<colorArry.length;i++){
+        const divBox = document.createElement('div');
+
+            divBox.style.background =colorArry[i];
+        divBox.addEventListener('click', function() {
+           let divBgColor=divBox.style.backgroundColor;
+            if(compareColors(randomPlayColor,divBgColor)){
+                alert("You Won")
+            }else {
+                divBox.style.background = '';
+            }
+        });
+
+        colorRow.appendChild(divBox);
+    }
+
+}
 
 
 //Fail
 function failGame(a){
-    a.classList.add("d-none");
+
 //model box
     //show Try Again
 }
@@ -90,5 +111,29 @@ function randomColor(){
     let green = Math.floor(Math.random() * 256);
     let blue = Math.floor(Math.random() * 256);
     return `rgb(${red},${green},${blue})`;
+}
+
+//Compare Color
+function compareColors(color1, color2) {
+    if (!color1 || !color2) {
+        return false;
+    }
+
+    // Convert color strings to RGB components
+    let rgb1 = colorToRGB(color1);
+    let rgb2 = colorToRGB(color2);
+
+    // Compare RGB components
+    return rgb1.red === rgb2.red && rgb1.green === rgb2.green && rgb1.blue === rgb2.blue;
+}
+
+function colorToRGB(color) {
+    let rgbArray = color.match(/\d+/g);
+    console.log(rgbArray)
+    return {
+        red: parseInt(rgbArray[0]),
+        green: parseInt(rgbArray[1]),
+        blue: parseInt(rgbArray[2])
+    };
 }
 
