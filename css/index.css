@@ -238,5 +238,10 @@ body{
     border: 2px solid deepskyblue;
 }
 /*Color Row End*/
+/* Wrong Answer */
+.falseAns{
+    font-family: 'Permanent Marker', cursive;
+    
+}
 
 

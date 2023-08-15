@@ -107,7 +107,14 @@ function createElement(color){
                 alert("You Won");
                 location.reload();
             }else {
-                alert("wrong answer");
+                const wrongAns=document.getElementById("wrongAns");
+                wrongAns.classList.remove("d-none");
+
+                setTimeout(()=>{
+                    wrongAns.classList.add("d-none");
+                },1000)
+                
+               
                 divBox.style.background = '';
             }
         });
