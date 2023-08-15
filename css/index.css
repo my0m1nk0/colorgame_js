@@ -192,13 +192,13 @@ body{
     .color-code{
         margin: 0;
         width: 500px;
-        height: 250px;
+        height: 200px;
     }
     .text-content{
         font-family: 'Permanent Marker', cursive;
         position: absolute;
-        top: 60%;
-        left: 35%;
+        top: 55%;
+        left: 40%;
         font-size: 30px;
         font-weight: bold;
         text-shadow: 2px 2px #0fd5d9;

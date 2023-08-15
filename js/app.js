@@ -38,9 +38,9 @@ const loading = document.getElementById("loading");
         loading.classList.add('d-none');
     });
 });
-function gamePlay(){
-    let colors = generateColor(9);
-    let randomPlayColor = colors[Math.floor(Math.random() * 9)];
+function gamePlay(num){
+    let colors = generateColor(num);
+    let randomPlayColor = colors[Math.floor(Math.random() * num)];
     textContent.innerText=randomPlayColor;
 
 
@@ -52,7 +52,7 @@ const showColor = document.getElementById('text-color');
 easyBtn.addEventListener("click", ()=>{
 chooseLevel.classList.add('d-none');
 showColor.classList.remove('d-none');
-gamePlay();
+gamePlay(9);
 
 })
 
