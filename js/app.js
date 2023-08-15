@@ -16,28 +16,45 @@ pause.addEventListener('click',()=>{
     pause.setAttribute("hidden","true")
 })
 
-let colors = generateColor(9);
-let randomPlayColor = colors[Math.floor(Math.random() * 9)]
-let colorBox = 9;
-console.log(randomPlayColor)
+
 
 //Play Btn
 document.addEventListener('DOMContentLoaded',()=>{
-
 const playBtn = document.getElementById("playGame");
 const loading = document.getElementById("loading");
+
 
     playBtn.addEventListener('click', () => {
         loading.classList.remove('d-none');
         setTimeout(() => {
             window.location.href = "game.html";
+
         }, 4000);
+
+
 
     });
     window.addEventListener('beforeunload', () => {
         loading.classList.add('d-none');
     });
 });
+function gamePlay(){
+    let colors = generateColor(9);
+    let randomPlayColor = colors[Math.floor(Math.random() * 9)];
+    textContent.innerText=randomPlayColor;
+
+
+}
+//Easy Pay Game
+const easyBtn = document.getElementById("easy");
+const chooseLevel = document.getElementById("button-game");
+const showColor = document.getElementById('text-color');
+easyBtn.addEventListener("click", ()=>{
+chooseLevel.classList.add('d-none');
+showColor.classList.remove('d-none');
+gamePlay();
+
+})
 
 //Play Game
 // playBtn.addEventListener("click",()=>{

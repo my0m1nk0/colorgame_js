@@ -24,7 +24,7 @@
     <source src="music/music.mp3" type="audio/mpeg">
 
 </audio>
-<div class="container text-center text-color">
+<div class="container text-center text-color d-none" id="text-color">
     <img src="image/color-background.png" class="color-code" alt="rainbow png">
     <p class="text-content"></p>
 
@@ -39,7 +39,19 @@
         <div class='loader--dot'></div>
         <div class='loader--text'></div>
     </div>
+    <img src="./image/play.png" class="play-btn" id="playGame" alt="">
+
 </div>
+<!--card Start-->
+<div class="row justify-content-center" id="button-game">
+    <div class="card" style="width: 18rem;">
+
+        <button type="submit" class="btn btn-outline-success rounded shadow m-4" id="easy">Easy</button>
+        <button type="submit" class="btn btn-outline-success rounded shadow m-4" id="normal">Normal</button>
+        <button type="submit" class="btn btn-outline-success rounded shadow m-4" id="hard">Hard</button>
+    </div>
+</div>
+<!--card End-->
 
 <!--Bootstrap & Propper Js CDN-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
