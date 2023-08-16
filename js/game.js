@@ -1,10 +1,11 @@
 const playHome = document.getElementById("play-home");
 const playMenu = document.getElementById('play-menu');
 playHome.addEventListener('click',()=>{
-
+    playSound();
     location.reload();
 });
 playMenu.addEventListener('click',()=>{
+    playSound();
     window.location.href="index.html"
 })
 
@@ -14,9 +15,9 @@ const chooseLevel = document.getElementById("button-game");
 const showColor = document.getElementById('text-color');
 const colorRow = document.getElementById("colorRow");
 const textContent = document.querySelector(".text-content");
-let colorBox=[];
 
 easyBtn.addEventListener("click", ()=>{
+playSound();
 easyGame();
 });
 function easyGame(){
@@ -29,6 +30,7 @@ function easyGame(){
 //Normal Play Game
 const normalBtn = document.getElementById("normal");
 normalBtn.addEventListener("click", ()=>{
+  playSound();
   normalGame();
 });
 function normalGame(){
@@ -38,12 +40,13 @@ function normalGame(){
     playMenu.classList.add('d-none');
 
 
-    colorBox.push(createElement(6))
+    createElement(6)
 }
 
 //Hard Play Game
 const hardBtn = document.getElementById("hard");
 hardBtn.addEventListener("click", ()=>{
+   playSound();
    hardGame();
 });
 function hardGame(){
@@ -51,12 +54,12 @@ function hardGame(){
     showColor.classList.remove('d-none');
     playHome.classList.remove('d-none');
     playMenu.classList.add('d-none');
-
-    colorBox.push(createElement(9))
+    createElement(9)
 }
 //Back Home
 const backHome = document.getElementById("back");
 backHome.addEventListener('click',()=>{
+    playSound();
     window.location.href='index.html';
 });
 
@@ -72,6 +75,7 @@ function createElement(color){
         divBox.classList.add('col-4')
         divBox.style.background =colorArry[i];
         divBox.addEventListener('click', function() {
+            playSound()
             let divBgColor=divBox.style.backgroundColor;
             divBox.style.cursor="none";
 
@@ -81,7 +85,7 @@ function createElement(color){
                 const continueGame = document.getElementById('continue');
                 showCongratulationsModal(modal);
                 continueGame.addEventListener('click',($event)=>{
-                    $event.preventDefault();
+                  playSound()
                     colorRow.innerHTML='';
                     if(color ==3){
                         easyGame()
@@ -94,6 +98,7 @@ function createElement(color){
 
                 });
                 home.addEventListener('click',()=>{
+                    playSound()
                     location.reload();
 
                 });

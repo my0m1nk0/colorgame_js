@@ -24,7 +24,9 @@ pause.addEventListener('click',()=>{
 
 
     playBtn.addEventListener('click', () => {
+        playSound()
         loading.classList.remove('d-none');
+
         setTimeout(() => {
             window.location.href = "game.html";
 
@@ -34,4 +36,11 @@ pause.addEventListener('click',()=>{
     window.addEventListener('beforeunload', () => {
         loading.classList.add('d-none');
 });
+
+    function  playSound(){
+        let audio=new Audio("../music/click-one.wav");
+        audio.loop = false;
+        audio.play();
+
+    }
 
