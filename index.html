@@ -15,7 +15,7 @@
 <img class="logo" src="image/logo.png" >
 
 <div class="container d-flex justify-content-between set-bar">
-    <img class="setting" src="/image/menu.png" id="play-home" alt="">
+    <img class="setting" src="/image/menu.png" id="play-home" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal" alt="">
     <img class="setting "  src="image/sound-off.png" id="play" alt="">
     <img class="setting "  src="image/sound-on.png" id="pause" hidden alt="">
 </div>
@@ -46,6 +46,39 @@
         <div class='loader--text'></div>
     </div>
 </div>
+<!--Modal Start-->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header mx-auto">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+            </div>
+            <div class="modal-body mx-auto">
+                Show a second modal and hide this one with the button below.
+            </div>
+            <div class="modal-footer mx-auto">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header mx-auto">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+            </div>
+            <div class="modal-body mx-auto">
+                Hide this modal and show the first with the button below.
+            </div>
+            <div class="modal-footer mx-auto">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal End-->
 
 <!--Propper Js CDN-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

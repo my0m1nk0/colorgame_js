@@ -1,9 +1,12 @@
 const playHome = document.getElementById("play-home");
-
+const playMenu = document.getElementById('play-menu');
 playHome.addEventListener('click',()=>{
 
     location.reload();
 });
+playMenu.addEventListener('click',()=>{
+    window.location.href="index.html"
+})
 
 //Easy Play Game
 const easyBtn = document.getElementById("easy");
@@ -19,6 +22,8 @@ easyGame();
 function easyGame(){
     chooseLevel.classList.add('d-none');
     showColor.classList.remove('d-none');
+    playHome.classList.remove('d-none');
+    playMenu.classList.add('d-none');
     createElement(3)
 }
 //Normal Play Game
@@ -29,6 +34,10 @@ normalBtn.addEventListener("click", ()=>{
 function normalGame(){
     chooseLevel.classList.add('d-none');
     showColor.classList.remove('d-none');
+    playHome.classList.remove('d-none');
+    playMenu.classList.add('d-none');
+
+
     colorBox.push(createElement(6))
 }
 
@@ -40,6 +49,9 @@ hardBtn.addEventListener("click", ()=>{
 function hardGame(){
     chooseLevel.classList.add('d-none');
     showColor.classList.remove('d-none');
+    playHome.classList.remove('d-none');
+    playMenu.classList.add('d-none');
+
     colorBox.push(createElement(9))
 }
 //Back Home
