@@ -1,46 +1,60 @@
 const music = document.getElementById("play");
 const pause = document.getElementById("pause");
-const musicBg = document.getElementById("musicBG");
-music.addEventListener('click',()=>{
-    musicBg.play();
+const playBtn = document.getElementById("playGame");
+const loading = document.getElementById("loading");
+
+//Play Sound
+music.addEventListener('click', () => {
+    backgroundSound()
 
     pause.removeAttribute("hidden");
-    music.setAttribute("hidden","true")
+    music.setAttribute("hidden", "true")
 
 })
-pause.addEventListener('click',()=>{
-    musicBg.pause();
+pause.addEventListener('click', () => {
+    muteSound()
 
     music.removeAttribute("hidden");
-    pause.setAttribute("hidden","true")
+    pause.setAttribute("hidden", "true")
 });
 
 
+//Play Game
+playBtn.addEventListener('click', () => {
+    playSound()
+    loading.classList.remove('d-none');
 
+    setTimeout(() => {
+        window.location.href = "game.html";
 
-//Play Btn
-    const playBtn = document.getElementById("playGame");
-    const loading = document.getElementById("loading");
+    }, 4000);
 
-
-    playBtn.addEventListener('click', () => {
-        playSound()
-        loading.classList.remove('d-none');
-
-        setTimeout(() => {
-            window.location.href = "game.html";
-
-        }, 4000);
-
-    });
-    window.addEventListener('beforeunload', () => {
-        loading.classList.add('d-none');
+});
+window.addEventListener('beforeunload', () => {
+    loading.classList.add('d-none');
 });
 
-    function  playSound(){
-        let audio=new Audio("../music/click-one.wav");
-        audio.loop = false;
-        audio.play();
+// Audio Function
 
-    }
+function playSound() {
+    let audio = new Audio("../music/click-one.wav");
+    audio.loop = false;
+    audio.play();
+
+}
+
+let audio = new Audio("../music/music.mp3");
+backgroundSound()
+
+function backgroundSound() {
+    audio.loop = true;
+    audio.play();
+
+}
+
+function muteSound() {
+    audio.pause();
+
+}
+
 
