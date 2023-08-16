@@ -9,6 +9,7 @@
 }
 *{
     box-sizing: border-box;
+    cursor: url("image/cursor.png")4 12,pointer;
 }
 body{
     margin: 0;
@@ -228,8 +229,11 @@ body{
 }
 /*Color Row Start*/
 #colorRow{
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    gap: 8px;
 }
 #colorRow >div{
     width: 80px;
