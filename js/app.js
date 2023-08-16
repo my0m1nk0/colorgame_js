@@ -18,7 +18,6 @@ pause.addEventListener('click',()=>{
 
 
 //Play Btn
-document.addEventListener('DOMContentLoaded',()=>{
     const playBtn = document.getElementById("playGame");
     const loading = document.getElementById("loading");
 
@@ -30,11 +29,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
         }, 4000);
 
-
-
     });
     window.addEventListener('beforeunload', () => {
         loading.classList.add('d-none');
-    });
 });
 
