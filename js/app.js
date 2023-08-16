@@ -13,7 +13,8 @@ pause.addEventListener('click',()=>{
 
     music.removeAttribute("hidden");
     pause.setAttribute("hidden","true")
-})
+});
+
 
 
 

@@ -1,4 +1,8 @@
+const playHome = document.getElementById("play-home");
 
+playHome.addEventListener('click',()=>{
+    window.location.reload();
+});
 
 //Easy Play Game
 const easyBtn = document.getElementById("easy");
@@ -19,19 +23,24 @@ function easyGame(){
 //Normal Play Game
 const normalBtn = document.getElementById("normal");
 normalBtn.addEventListener("click", ()=>{
+  normalGame();
+});
+function normalGame(){
     chooseLevel.classList.add('d-none');
     showColor.classList.remove('d-none');
     colorBox.push(createElement(6))
-});
+}
 
 //Hard Play Game
 const hardBtn = document.getElementById("hard");
 hardBtn.addEventListener("click", ()=>{
+   hardGame();
+});
+function hardGame(){
     chooseLevel.classList.add('d-none');
     showColor.classList.remove('d-none');
     colorBox.push(createElement(9))
-});
-
+}
 //Back Home
 const backHome = document.getElementById("back");
 backHome.addEventListener('click',()=>{
@@ -62,9 +71,14 @@ function createElement(color){
                 continueGame.addEventListener('click',($event)=>{
                     $event.preventDefault();
                     colorRow.innerHTML='';
-                    easyGame();
+                    if(color ==3){
+                        easyGame()
+                    }else if (color == 6){
+                        normalGame()
+                    }else if (color == 9){
+                        hardGame()
+                    }
                     hideCongratulationsModal(modal);
-
 
                 });
                 home.addEventListener('click',()=>{

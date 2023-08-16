@@ -183,6 +183,11 @@ body{
         content: "Loading...";
     }
 }
+/*Music PNG CSS*/
+.setting{
+    width: 70px;
+    height: 70px;
+}
 /*Loading Css End*/
 .text-color{
     position: relative;
