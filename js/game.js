@@ -61,14 +61,13 @@ function createElement(color){
         divBox.style.background =colorArry[i];
         divBox.addEventListener('click', function() {
             let divBgColor=divBox.style.backgroundColor;
+            divBox.style.cursor="none";
 
             if(compareColors(randomPlayColor,divBgColor)){
-                    // Your code here
                 const modal = document.getElementById('modal');
                 const home = document.getElementById('home');
                 const continueGame = document.getElementById('continue');
                 showCongratulationsModal(modal);
-
                 continueGame.addEventListener('click',($event)=>{
                     $event.preventDefault();
                     colorRow.innerHTML='';
@@ -94,7 +93,7 @@ function createElement(color){
 
                 setTimeout(()=>{
                     wrongAns.classList.add("d-none");
-                },1000)
+                },2000)
 
 
                 divBox.style.background = '';
