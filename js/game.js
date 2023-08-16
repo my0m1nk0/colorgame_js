@@ -1,7 +1,8 @@
 const playHome = document.getElementById("play-home");
 
 playHome.addEventListener('click',()=>{
-    window.location.reload();
+
+    location.reload();
 });
 
 //Easy Play Game
@@ -52,7 +53,7 @@ backHome.addEventListener('click',()=>{
 function createElement(color){
     let colorArry = generateColor(color);
     let randomPlayColor = colorArry[Math.floor(Math.random() * color)];
-    console.log(randomPlayColor)
+
     textContent.innerText=randomPlayColor;
     for(let i =0; i<colorArry.length;i++){
         const divBox = document.createElement('div');
@@ -155,7 +156,6 @@ function compareColors(color1, color2) {
 
 function colorToRGB(color) {
     let rgbArray = color.match(/\d+/g);
-    console.log(rgbArray)
     return {
         red: parseInt(rgbArray[0]),
         green: parseInt(rgbArray[1]),
